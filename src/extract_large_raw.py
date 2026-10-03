@@ -2,7 +2,7 @@
 Three raw downloads are too large for the repository (EIA INTL.zip ~24 MB; UNCTAD US_RCA.7z ~9 MB,
 125 MB unpacked; UNCTAD US_TermsOfTrade.7z). This script re-creates the small extracts that are committed
 and used by build_dataset.py. Re-download the archives from the URLs in data/SOURCES.md, place them in
-data/raw/eia and data/raw/unctad, then run:  python code/extract_large_raw.py
+data/raw/eia and data/raw/unctad, then run:  python src/extract_large_raw.py
 """
 from pathlib import Path
 import zipfile

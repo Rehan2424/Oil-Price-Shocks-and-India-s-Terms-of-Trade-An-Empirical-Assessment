@@ -8,7 +8,7 @@ Outputs (data/processed/):
   final_dataset.xlsx - all three tables + a variable dictionary
 
 No number is typed by hand: every value is read from a raw file listed in data/SOURCES.md.
-Run from the repository root:  python code/build_dataset.py
+Run from the repository root:  python src/build_dataset.py
 """
 from pathlib import Path
 import glob

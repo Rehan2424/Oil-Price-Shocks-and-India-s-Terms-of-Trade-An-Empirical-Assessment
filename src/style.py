@@ -47,6 +47,7 @@ def save(fig, name, source):
     """Save with a source line (every chart on a slide carries its source)."""
     fig.text(0.01, 0.005, "Source: " + source, fontsize=8, color=MUTED, ha="left", va="bottom")
     fig.savefig(FIG / f"{name}.png", bbox_inches="tight")
+    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight")   # vector copy, used by the Beamer slides
     return FIG / f"{name}.png"
 
 

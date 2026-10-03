@@ -66,7 +66,9 @@ def ardl_uecm(y, X, maxlag=2, fixed=None):
     else:
         p, q = fixed
     u = UECM(y, p, X, q, trend="c").fit()
-    bt = u.bounds_test(case=3, asymptotic=False)
+    # Finite-sample p-values are simulated, so fix the seed: otherwise the third decimal moves
+    # between runs and the tables would not match the slides exactly.
+    bt = u.bounds_test(case=3, asymptotic=False, rng=2026)
     yname = y.name
     alpha = u.params[f"{yname}.L1"]
     lr = {}
