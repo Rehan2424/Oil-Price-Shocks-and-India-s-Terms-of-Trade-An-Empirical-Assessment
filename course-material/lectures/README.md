@@ -21,7 +21,7 @@ Course: NPTEL, *International Trade*, Dr. Pratap C. Mohanty, IIT Roorkee. Main t
 | 21 | [L21_Partial_Equilibrium_Analysis.pdf](L21_Partial_Equilibrium_Analysis.pdf) | Partial vs general equilibrium, **definition of net barter ToT** | **High**: oil import market; ToT definition we measure |
 | 22 | [L22_Offer_Curves.pdf](L22_Offer_Curves.pdf) | **Offer curves**, ToT equilibrium, shifts, tariffs | **High**: our central framework |
 
-Full per-lecture notes: [`theory/lecture_digest.md`](../../theory/lecture_digest.md).
+Full per-lecture notes: [`docs/lecture_notes.md`](../../docs/lecture_notes.md).
 How each concept is applied: [`docs/01_theory_framework.md`](../../docs/01_theory_framework.md).
 
 These files are course material. Keep this repository **private**.

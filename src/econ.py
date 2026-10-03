@@ -38,7 +38,8 @@ def unit_root_row(s):
 def zivot_andrews_break(s):
     s = s.dropna()
     za = ZivotAndrews(s, trend="c")
-    # the arch implementation stores the break position in the regression results; recover it via grid search
+    # arch gives the Zivot-Andrews statistic and p-value but not the break date, so we locate the break
+    # the way the test does: the date that makes the t-statistic on y_{t-1} most negative (one lag of dy).
     best, best_t = None, np.inf
     n = len(s)
     for k in range(int(0.15 * n), int(0.85 * n)):
@@ -164,7 +165,6 @@ def nardl_multipliers(res, horizons=10):
     al = p["y_1"]
     out = []
     for sign, lvl, sr in ((+1, "xp_1", "dxp"), (-1, "xn_1", "dxn")):
-        y_path = [0.0]
         x_level = 1.0 * sign
         # y_t - y_{t-1} = al*y_{t-1} + b*x_{t-1} + c*dx_t   with x stepping once at t=0
         y_prev = 0.0
@@ -179,8 +179,11 @@ def nardl_multipliers(res, horizons=10):
     return pd.concat(out, axis=1)
 
 
-def local_projection(df, y, shock, horizons=6, controls_lags=1, hac=True):
-    """Jorda (2005) local projections: y_{t+h} - y_{t-1} on shock_t (+ lags of shock and dy)."""
+def local_projection(df, y, shock, horizons=6, controls_lags=1):
+    """Jorda (2005) local projections: y_{t+h} - y_{t-1} on shock_t (+ lags of shock and dy).
+
+    One OLS regression per horizon. Newey-West errors with h + 1 lags, because the overlapping
+    left-hand side makes the residuals autocorrelated up to order h."""
     d = df.copy()
     d["dy"] = d[y].diff()
     rows = []

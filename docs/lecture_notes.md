@@ -1,4 +1,4 @@
-# Lecture Digest
+# Lecture notes
 
 What each lecture covers, and what we take from it for the oil and terms-of-trade project. Relevance: **High** = appears on slides; **Medium** = viva notes; **Low** = background only.
 
@@ -23,7 +23,7 @@ What each lecture covers, and what we take from it for the oil and terms-of-trad
 ### L08: Comparative Advantage and RCA (High)
 - Covers Ricardo, opportunity cost, PPFs, gains from trade, and the equilibrium relative price lying between the two autarky prices.
 - Defines the **Balassa RCA index**: RCA_ij = (X_ij / X_wj) / (X_i / X_w). RCA > 1 means comparative advantage. Sources named are UNCTADstat and WITS.
-- **For us:** India has almost no crude but may show **RCA > 1 in refined petroleum products** (to be computed). This acquired advantage is what partly *hedges* India's ToT against oil shocks.
+- **For us:** India has almost no crude but a strong **RCA in refined petroleum**: 0.06 in 1999, 1.26 in 2000 and 4.37 in 2025 (UNCTADstat). This acquired advantage is what partly *hedges* India's ToT against oil shocks.
 
 ### L11: Neoclassical / Standard Trade Model (High)
 - Covers the increasing-cost PPF, MRT, community indifference curves, autarky equilibrium, the trade line, and gains from trade.
@@ -67,7 +67,7 @@ What each lecture covers, and what we take from it for the oil and terms-of-trad
 
 ### L19: Measuring IIT I (High)
 - Covers the **Grubel–Lloyd index**: GL = 1 − |X − M| / (X + M), between 0 and 1. Covers its limits (trade imbalance; it cannot separate horizontal from vertical IIT).
-- **For us:** compute GL for India's fuel trade at HS-2 (chapter 27) vs HS-4 (2709 crude, 2710 products) to show the aggregation effect.
+- **For us:** GL for India's oil trade is 0.55 when crude and products count as one industry and 0.10 when HS 2709 and 2710 are measured separately (UN Comtrade, 2025). That is the aggregation effect.
 
 ### L20: Measuring IIT II (High)
 - Covers horizontal vs vertical IIT using a **unit-value dispersion rule** (Abd-el-Rahman ±15%; GHM; Fontagné–Freudenberg; Azhar–Elliott).

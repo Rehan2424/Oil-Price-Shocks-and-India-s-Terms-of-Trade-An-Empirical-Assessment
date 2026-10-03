@@ -31,7 +31,7 @@ India's terms of trade is **P_X / P_Y**. With many goods, this is the **net bart
 | **D. Oil glut** (supply surge, demand collapse) | The reverse of case A | **ToT improves** | 2014–16 collapse; 2020 COVID crash |
 
 **Elasticity point:** India's short-run oil demand is price-inelastic. When OC_W shifts, most of the adjustment shows up in **price (ToT)** rather than **volume**.
-- *Data check:* compare the import **unit value** index with the import **quantum** index in shock years (both are in RBI Handbook Table 127).
+- *Data check:* crude import volumes (RBI Table 32, UN Comtrade) barely respond to price: an elasticity of 0.16, while the import bill moves almost one-for-one with the oil price (correlation 0.96). See notebook 02.
 
 **These cases are our hypotheses:**
 - **H1 (case A):** an oil price rise worsens India's ToT.
@@ -96,26 +96,20 @@ where s_x and s_m are oil's shares in India's export and import baskets.
 
 ---
 
-## 7. Where theory appears in the 15-minute presentation
+## 7. Where theory appears in the presentation
 
-No standalone theory slides. Theory appears as follows:
+There are no standalone theory slides. Each concept turns up where it does some work:
 
-1. **"How an oil shock hits India: offer curves in action"** (P1): India vs rest-of-world offer curves, with cases A/B/C drawn and the actual ToT values marked. Sets up H1 and H3.
-2. **"How big should the hit be?"** (P1/P2): the benchmark (s_x − s_m) from real oil shares, plus RCA in refining as the hedge.
-3. **Data slide** (P2): the partial-equilibrium oil market as the import bill vs volume chart.
-4. **Methods slide** (P3): the short-run vs long-run horizon (L13) as the reason for the error-correction model.
-5. **Policy slide** (P4):
-   - the monopoly markup and pro-competitive effect, applied to crude-source diversification
-   - the ToT income loss as % of GDP
+| Slide | Concept | What the audience sees |
+|---|---|---|
+| 2 Question and hypotheses | Net barter ToT (L21); monopoly power (L16); offer curves (L22) | The definition we measure; where each hypothesis comes from |
+| 3 Offer curves for India | Offer curves, tariff case, large country (L22, L11) | Cases A and C drawn for India; ToT ray 1.00 → 0.86; −16% (2022) and −13% (2026) |
+| 4 How big should the hit be? | ToT definition (L21); RCA (L08); Grubel–Lloyd (L17, L19) | Benchmark −0.25 → −0.10; RCA 0.06 → 4.37; GL 0.55 vs 0.10 |
+| 7 Method | Time horizons (L13) | Short run vs long run, the reason for the error-correction model |
+| 10 Symmetric, and half as large | RCA as a hedge (L08, L16) | Rolling elasticity tracking the benchmark |
+| 11 H3 | Offer curves, case B (L22) | Why the world-boom softening does not show up for India |
+| 12 What it means for India | Pro-competitive effect (L16); refining scale (L08, L16) | Policy: diversify suppliers, grow the refining hedge |
+| Backup: refining hedge | Vertical IIT and the unit-value rule (L20) | Refined exports worth 1.2–1.4 times crude imports per tonne |
 
-Viva notes then cover every concept in the tables above in definition-plus-application form.
-
----
-
-## 8. Facts to verify in the data phase (no unverified number goes on a slide)
-
-- India's crude oil import dependence (PPAC).
-- India's share of world oil consumption and its rank (Energy Institute *Statistical Review of World Energy*; cross-check US EIA).
-- RCA of India's refined petroleum exports (UNCTADstat / UN Comtrade).
-- Oil shares of India's exports and imports by year (RBI Handbook / DGCI&S).
-- Indian basket composition and its spread to Brent (PPAC; World Bank).
+The rest (partial equilibrium, Ricardo–Viner, H-O, CIF/FOB, mercantilism, immiserizing growth) is in the viva notes,
+`viva-notes/01_theory.md`, in definition-plus-application form.

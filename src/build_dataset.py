@@ -81,6 +81,7 @@ def pink_sheet_muv():
 
 # ----------------------------------------------------------------------------- PPAC Indian basket
 def ppac_icb():
+    # One file per fiscal year; each row is a year ("2025-26") followed by April ... March prices.
     recs = []
     for f in sorted(glob.glob(str(RAW / "ppac" / "PPAC_crude-price_*.xlsx"))):
         df = pd.read_excel(f, sheet_name=0, header=None)
@@ -104,6 +105,9 @@ def _norm(s):
 
 
 def dgcis_monthly(folder, suffix):
+    # DGCI&S sheets are laid out by row label ("Export Grand Total", "Net terms of trade", ...), with
+    # each month taking two columns: unit value index, then quantum index. Rows are found by label,
+    # not position, because the layout shifts slightly between years.
     recs = {}
     files = sorted(glob.glob(str(RAW / "dgcis" / folder / "*.xlsx")))
     for f in files:
@@ -128,11 +132,14 @@ def dgcis_monthly(folder, suffix):
 
 # ----------------------------------------------------------------------------- RBI Handbook (HTML tables)
 def _rbi_table(name):
+    # The saved Handbook pages contain several small layout tables; the data table is the largest one.
     t = pd.read_html(RAW / "rbi" / name)
     return max(t, key=lambda x: x.size)
 
 
 def rbi_t121():
+    # Table 121 stacks three base periods (1978-79, 1999-2000, 2012-13), each block introduced by a
+    # "Base: ..." row, so we carry the current base down as we read.
     t = _rbi_table("HBS2026_T121_Index_Numbers_Terms_of_Trade.html")
     base, recs = None, []
     for _, r in t.iterrows():
@@ -266,6 +273,7 @@ def shocks_monthly():
 
 # ----------------------------------------------------------------------------- assemble
 def fy_average(df, cols, how="mean", min_months=12):
+    """Average (or sum) monthly series over Indian fiscal years; incomplete years are left missing."""
     x = df.copy()
     x["fy"] = x["date"].map(fy_of)
     g = x.groupby("fy")

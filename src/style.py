@@ -1,7 +1,8 @@
-"""Shared chart style for all figures (static PNGs for slides).
+"""Chart style shared by every figure the notebooks produce (output/figures/).
 
-Palette: validated categorical slots 1-3 (blue, orange, aqua) on a light surface; text uses ink tokens,
-never series colours; one y-axis per panel (two measures -> stacked panels, never a dual axis).
+Three series colours: blue and orange for the two main series (in the time-series charts, the oil
+price and India's terms of trade), green for a third. Text is grey, never in a series colour. Each panel has one y-axis: two measures go in stacked panels with a
+shared x-axis, because a second y-axis makes it too easy to imply a relationship by rescaling.
 """
 from pathlib import Path
 
@@ -47,7 +48,8 @@ def save(fig, name, source):
     """Save with a source line (every chart on a slide carries its source)."""
     fig.text(0.01, 0.005, "Source: " + source, fontsize=8, color=MUTED, ha="left", va="bottom")
     fig.savefig(FIG / f"{name}.png", bbox_inches="tight")
-    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight")   # vector copy, used by the Beamer slides
+    # vector copy; no creation date inside, so re-running a notebook does not change an identical file
+    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight", metadata={"CreationDate": None})
     return FIG / f"{name}.png"
 
 

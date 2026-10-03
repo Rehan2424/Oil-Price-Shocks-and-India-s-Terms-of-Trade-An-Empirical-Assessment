@@ -1,6 +1,6 @@
 # Results
 
-All numbers come from [`../output/tables/`](../output/tables/), produced by the notebooks in [`../code/`](../code/).
+All numbers come from [`../output/tables/`](../output/tables/), produced by the notebooks in [`../notebooks/`](../notebooks/).
 
 ## Headline findings
 

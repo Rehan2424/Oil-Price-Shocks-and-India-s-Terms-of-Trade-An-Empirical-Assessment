@@ -30,11 +30,12 @@ All annual Indian data are on the **fiscal year (April–March)**, labelled by t
 - **Identified shocks:**
   - Känzig (2021) oil supply news shocks (to Dec 2025)
   - Baumeister & Hamilton (2019) oil supply, economic activity and oil demand shocks (to Mar 2026)
-- **Controls:**
-  - BIS real effective exchange rate
-  - World Bank non-energy commodity price index
-  - Gold price
-  - World industrial production / global economic conditions
+- **Controls used in the models:**
+  - World Bank non-energy commodity price index (deflated by MUV), in every annual model
+  - Gold price (deflated by MUV), as a robustness check
+- **Collected but kept out of the main models:** the BIS and RBI real effective exchange rates and world industrial
+  production. The exchange rate reacts to oil shocks itself, so controlling for it would absorb part of the effect
+  we are measuring, and world activity is already part of the Baumeister–Hamilton shocks used for H3.
 
 ## 3. Problems found in official data, and what we did
 

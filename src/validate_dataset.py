@@ -38,7 +38,7 @@ for b in ("b12", "b22"):
     d = m.dropna(subset=[f"ntt_pub_{b}"])
     diff = (d[f"ntt_{b}"] - d[f"ntt_pub_{b}"]).abs().max()
     check(f"DGCI&S {b}: NTT = 100*UVI_x/UVI_m", diff < 0.01,
-          f"{len(d)} months ({d.date.min():%Y-%m} to {d.date.max():%Y-%m}); max |diff| = {diff:.4f}")
+          f"{len(d)} months ({d.date.min():%Y-%m} to {d.date.max():%Y-%m}); max abs. difference = {diff:.4f}")
 
 # 2. DGCI&S fiscal-year UVI (from the FY files) vs RBI Handbook Table 121 (2012-13 base)
 fis = []
@@ -57,7 +57,7 @@ fis = pd.DataFrame(fis).merge(a[["fy", "uvi_x_rbi_2012", "uvi_m_rbi_2012"]], on=
 dx = (fis["uvi_x_dgcis"] - fis["uvi_x_rbi_2012"]).abs().max()
 dm = (fis["uvi_m_dgcis"] - fis["uvi_m_rbi_2012"]).abs().max()
 check("DGCI&S fiscal-year UVIs = RBI Table 121 (2012-13 base)", max(dx, dm) < 0.11,
-      f"FY{fis.fy.min()}-{fis.fy.max()}; max |diff| exports {dx:.3f}, imports {dm:.3f} (RBI rounds to 1 decimal)")
+      f"FY{fis.fy.min()}-{fis.fy.max()}; max abs. difference exports {dx:.3f}, imports {dm:.3f} (RBI rounds to 1 decimal)")
 
 # 3. RBI Table 121 internal consistency
 t = B.rbi_t121()
@@ -82,7 +82,7 @@ j = j[j.date >= "1990-01-01"]
 mad = (j.brent - j.brent_fred).abs().mean()
 corr = np.corrcoef(np.log(j.brent), np.log(j.brent_fred))[0, 1]
 check("Brent: World Bank Pink Sheet vs FRED (EIA)", corr > 0.999 and mad < 1.0,
-      f"{len(j)} months since 1990; corr(log) = {corr:.5f}; mean |diff| = ${mad:.2f}/bbl")
+      f"{len(j)} months since 1990; corr(log) = {corr:.5f}; mean abs. difference = ${mad:.2f}/bbl")
 
 # 5. PPAC Indian basket vs World Bank Brent and Dubai
 j = m.dropna(subset=["icb_ppac", "brent", "dubai"])
@@ -101,7 +101,7 @@ note("PPAC data gap", "PPAC website serves an April-2023 provisional file under 
 # 6. WDI and UNCTAD merchandise ToT are the same series
 j = c.dropna(subset=["ntt_wdi", "ntt_unctad"])
 check("WDI NBTT = UNCTAD terms-of-trade index", (j.ntt_wdi - j.ntt_unctad).abs().max() < 0.06,
-      f"{len(j)} years; max |diff| = {(j.ntt_wdi - j.ntt_unctad).abs().max():.3f}")
+      f"{len(j)} years; max abs. difference = {(j.ntt_wdi - j.ntt_unctad).abs().max():.3f}")
 
 # 7. Agreement between ToT measures (growth rates)
 g = a[["fy", "tot_gs_na", "ntt_rbi_chained"]].dropna()
@@ -125,7 +125,7 @@ for y, v in zip(yrs, row.tolist()[1:]):
     if len(t111):
         diffs.append(abs(float(v) - float(t111.iloc[0])))
 check("Oil imports: RBI Table 111 = Table 115 (Petroleum, crude & products)", max(diffs) < 1.0,
-      f"{len(diffs)} years; max |diff| = US${max(diffs):.1f} mn")
+      f"{len(diffs)} years; max abs. difference = US${max(diffs):.1f} mn")
 
 # 9. Crude import volumes: UN Comtrade (CY, kg) vs RBI Table 32 (FY, MMT)
 j = c[["year", "m_2709_kg"]].dropna().merge(a[["fy", "crude_imp_mmt"]], left_on="year", right_on="fy")

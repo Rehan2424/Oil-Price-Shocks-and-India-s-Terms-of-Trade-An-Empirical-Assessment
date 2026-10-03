@@ -37,7 +37,7 @@ m = pd.read_csv(P / "monthly.csv", parse_dates=["date"]).set_index("date")
 
 
 def out(fig, name):
-    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight", pad_inches=0.02, metadata={"CreationDate": None})
     plt.close(fig)
 
 

@@ -1,6 +1,6 @@
 # Methodology
 
-The code for each step is in the notebooks in [`../code/`](../code/). Open them on GitHub to see every output.
+The code for each step is in the notebooks in [`../notebooks/`](../notebooks/). Open them on GitHub to see every output.
 
 ## Step 0: Measure the terms of trade correctly
 - **Net barter ToT** = export unit value index / import unit value index × 100 (L21's definition). We recompute it from the published UVIs.

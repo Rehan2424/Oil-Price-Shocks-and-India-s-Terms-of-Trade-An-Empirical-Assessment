@@ -6,7 +6,7 @@ Every number in this project must come from an **official statistical agency, an
 
 | Tier | Source | What we take from it |
 |---|---|---|
-| **A1: Indian official** | **RBI** *Handbook of Statistics on the Indian Economy*; RBI DBIE | Unit value and quantum indices, ToT (Table 127), REER, BoP, GDP, trade by commodity |
+| **A1: Indian official** | **RBI** *Handbook of Statistics on the Indian Economy*; RBI DBIE | Unit value and quantum indices, ToT (Table 121 in the 2025-26 edition), REER, BoP, GDP, trade by commodity |
 | | **DGCI&S** (Ministry of Commerce), Foreign Trade Indices | Monthly/annual export and import unit value indices, ToT |
 | | **Ministry of Commerce TradeStat** | Commodity-level trade values (HS 27, 2709, 2710) |
 | | **PPAC** (Ministry of Petroleum & Natural Gas) | Indian crude basket price, crude import volume/value, import dependence |
