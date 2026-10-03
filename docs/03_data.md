@@ -49,7 +49,10 @@ These are worth knowing for the viva: they show the data were checked, not just 
    - We use **only unit value indices and NTT**, never QI, GTT or ITT.
 4. **WDI's 1960s deflators are a back-cast artefact:** the export/import deflator ratio is constant at its 1999 value. The national-accounts ToT starts in FY1970-71.
 5. **PPAC's website serves the wrong file for FY2022-23** (a provisional April 2023 table). Indian basket data for that year are missing; the file is kept, renamed, and not used.
-6. **Monthly DGCI&S data before April 2019 are not published online.**
+6. **RBI Handbook Table 32 (crude production and imports) has a copy-paste error.**
+   - The rows for FY1990-91 to FY1997-98 are an exact duplicate of FY2000-01 to FY2007-08 in all four columns. The validation script detects any repeated block of 4+ rows automatically.
+   - Those eight years are set to missing. Volume data are used from FY1998-99 on, where they match UN Comtrade within ±9%.
+7. **Monthly DGCI&S data before April 2019 are not published online.**
    - The 1999-2000-base monthly page says "No Data Found"; the 2012-13 archive starts in FY2019-20.
    - The monthly sample is therefore 87 months. The long annual series carry the history.
 

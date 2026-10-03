@@ -147,6 +147,33 @@ for lab_, base_, v in zip(labels[1:], bases[1:], gdp_row[1:]):
 check("WDI India GDP year t = RBI FY t/t+1 (new 2022-23 base)", all(ok) and len(ok) == 3,
       "WDI 2022, 2023, 2024 equal RBI Table 4 FY2022-23, 2023-24, 2024-25 (Rs crore)")
 
+# 10b. Copy-paste errors: identical blocks of >= 4 consecutive year rows inside an RBI table
+def duplicated_blocks(fname, k=4):
+    t = B._rbi_table(fname)
+    rows = t[t[0].astype(str).str.match(r"^\d{4}-\d{2}$")]
+    vals = [tuple(r[1:]) for r in rows.astype(str).values.tolist()]
+    years = rows[0].tolist()
+    hits = []
+    for i in range(len(vals) - k + 1):
+        for j in range(i + 1, len(vals) - k + 1):
+            if vals[i:i + k] == vals[j:j + k]:
+                hits.append((years[i], years[j]))
+    return hits
+
+for fname in ["HBS2026_T121_Index_Numbers_Terms_of_Trade.html", "HBS2026_T111_Foreign_Trade_USD.html",
+              "HBS2026_T32_Crude_Production_Imports.html", "HBS2026_T133_Exchange_Rate_FY.html",
+              "HBS2026_T135_NEER_REER_40_FY.html"]:
+    hits = duplicated_blocks(fname)
+    if not hits:
+        check(f"No duplicated row blocks in {fname.split('_')[1]}", True, "no run of 4+ identical year rows")
+    else:
+        note(f"Duplicated rows found in {fname.split('_')[1]}",
+             f"rows starting {hits[0][0]} repeat rows starting {hits[0][1]} ({len(hits)} overlapping 4-row matches). "
+             "Table 32 FY1990-91..1997-98 is a copy of FY2000-01..2007-08; those years are set to missing.")
+a32 = a.set_index("fy")[["crude_imp_mmt"]]
+check("Table 32 duplicated years removed from dataset", a32.loc[1990:1997, "crude_imp_mmt"].isna().all(),
+      "crude_imp_mmt is missing for FY1990-97; FY1998-99 onward kept (matches UN Comtrade within +/-9%)")
+
 # 11. Known artefacts / exclusions
 q = m[["qi_x_b12"]].dropna()
 note("DGCI&S export quantum index (2012-13 base) not used",

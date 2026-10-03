@@ -18,6 +18,12 @@ Hard checks failed: **0**
 | PASS | Oil imports: RBI Table 111 = Table 115 (Petroleum, crude & products) | 6 years; max |diff| = US$0.5 mn |
 | PASS | Crude import tonnes: Comtrade (CY) vs RBI Table 32 (FY) | 26 years; ratio range 0.91-1.09 (CY vs FY timing) |
 | PASS | WDI India GDP year t = RBI FY t/t+1 (new 2022-23 base) | WDI 2022, 2023, 2024 equal RBI Table 4 FY2022-23, 2023-24, 2024-25 (Rs crore) |
+| PASS | No duplicated row blocks in T121 | no run of 4+ identical year rows |
+| PASS | No duplicated row blocks in T111 | no run of 4+ identical year rows |
+| NOTE | Duplicated rows found in T32 | rows starting 1990-91 repeat rows starting 2000-01 (5 overlapping 4-row matches). Table 32 FY1990-91..1997-98 is a copy of FY2000-01..2007-08; those years are set to missing. |
+| PASS | No duplicated row blocks in T133 | no run of 4+ identical year rows |
+| PASS | No duplicated row blocks in T135 | no run of 4+ identical year rows |
+| PASS | Table 32 duplicated years removed from dataset | crude_imp_mmt is missing for FY1990-97; FY1998-99 onward kept (matches UN Comtrade within +/-9%) |
 | NOTE | DGCI&S export quantum index (2012-13 base) not used | monthly QI ranges 54-2001; this is why RBI Table 121 shows QI=473.6 and GTT=38.2 for 2025-26. Only unit value indices and NTT are used. |
 | NOTE | WDI goods & services deflators 1960-69 | ratio frozen at 1.18413 (WDI back-cast with a common deflator); tot_gs_na starts in FY1970-71. |
 | NOTE | RBI base-year series disagree over the overlap 1999-00 to 2007-08 | 1978-79 base: +21.7%; 1999-2000 base: -21.0%. The old base uses outdated weights, so the chained series uses the newest base for each period (linked at 1999-00 and 2012-13). |

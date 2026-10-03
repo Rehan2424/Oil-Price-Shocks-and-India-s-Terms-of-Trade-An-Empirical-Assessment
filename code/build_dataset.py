@@ -161,9 +161,13 @@ def rbi_t111():
 def rbi_t32():
     t = _rbi_table("HBS2026_T32_Crude_Production_Imports.html")
     rows = t[t[0].astype(str).str.match(r"^\d{4}-\d{2}$")]
-    return pd.DataFrame({"fy": rows[0].str[:4].astype(int).values,
-                         "crude_prod_mmt": to_num(rows[1]).values, "pol_prod_mmt": to_num(rows[2]).values,
-                         "crude_imp_mmt": to_num(rows[3]).values, "pol_imp_mmt": to_num(rows[4]).values})
+    out = pd.DataFrame({"fy": rows[0].str[:4].astype(int).values,
+                        "crude_prod_mmt": to_num(rows[1]).values, "pol_prod_mmt": to_num(rows[2]).values,
+                        "crude_imp_mmt": to_num(rows[3]).values, "pol_imp_mmt": to_num(rows[4]).values})
+    # The published rows for FY1990-91..1997-98 are an exact copy of FY2000-01..2007-08 (all four columns),
+    # a transcription error in the Handbook (see validation report), so they are set to missing.
+    out.loc[out["fy"].between(1990, 1997), ["crude_prod_mmt", "pol_prod_mmt", "crude_imp_mmt", "pol_imp_mmt"]] = np.nan
+    return out
 
 
 def rbi_t133():
