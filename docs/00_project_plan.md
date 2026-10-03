@@ -34,16 +34,22 @@ Other channels to discuss:
 | **H2** | ToT responds asymmetrically to oil price increases vs. decreases | NARDL |
 | **H3** | Supply-driven oil shocks hurt ToT more than demand-driven ones | Local projections with identified oil shocks |
 
-## 4. Course theory we will use
+## 4. Course theory, applied rather than explained alone
 
-The detailed mapping comes from the lecture digest, `theory/lecture_digest.md`, which is made after the lecture PDFs are uploaded. Expected concepts:
-- Terms of trade: net barter, income and gross ToT
-- Prebisch–Singer hypothesis
-- Harberger–Laursen–Metzler effect (ToT → current account)
-- Balance of payments: elasticities approach (Marshall–Lerner, J-curve) and absorption approach
-- Real exchange rate, REER, PPP
-- Dutch disease / immiserizing growth (as contrasts)
-- The small open economy / price-taker assumption. India is the world's 3rd-largest oil consumer, so this is a viva talking point.
+**Rule:** no theory slide stands alone. Each concept appears as *how it works in India's oil case* plus *a number or chart from our data*. Full mapping: [`01_theory_framework.md`](01_theory_framework.md). Per-lecture notes: [`../theory/lecture_digest.md`](../theory/lecture_digest.md).
+
+| Concept (lecture) | How we apply it |
+|---|---|
+| **Offer curves** (L22, L21) | India vs rest-of-world (incl. OPEC+) offer curves. Oil supply shock, world demand boom and India's demand growth each shift a curve and rotate India's ToT ray. This gives H1 and H3 |
+| **Net barter ToT definition** (L21) | Export unit value index / import unit value index: exactly our DGCI&S/RBI series |
+| **Comparative advantage, Balassa RCA** (L08) | RCA of India's refined petroleum exports: an acquired advantage that partly hedges oil shocks |
+| **Grubel–Lloyd, vertical IIT** (L19, L20, L17) | India imports crude and exports refined fuels. GL at HS-2 vs HS-4 shows the aggregation effect; the unit-value gap shows value addition |
+| **Partial equilibrium** (L21) | India's inelastic crude import demand: price spikes raise the import bill with little volume change |
+| **Monopoly markup, scale economies** (L16, L17) | OPEC+ markup p(1 − 1/e); cuts are effective because demand is inelastic. Diversifying crude suppliers is a pro-competitive gain. Refining scale is the source of India's RCA |
+| **Standard trade model, small vs large country** (L11) | A worse ToT rotates India's trade line, giving a real income loss (net oil import bill as % of GDP). Is India a price-taker? |
+| **Ricardo–Viner, time horizons** (L13) | Winners and losers of oil shocks; short run vs long run maps onto our error-correction model |
+| **H-O endowments, transport costs** (L12, L14) | Oil-scarce endowment makes the exposure structural. The CIF/FOB wedge is a limitation of the ToT measure |
+| **Mercantilism, immiserizing growth** (L06, L18) | Viva points: trade deficit vs ToT welfare loss; growth-driven oil demand worsening ToT |
 
 Historical hooks: 1990–91 Gulf War and India's BoP crisis; 2008 spike; 2014–16 collapse; 2020 COVID crash; 2022 Russia–Ukraine shock and discounted Russian crude.
 
@@ -75,23 +81,24 @@ Every reference is verified against its journal page or DOI before it is used.
 | Net barter ToT, export and import unit value indices, income ToT (annual, FY 1980-81 onward) | RBI *Handbook of Statistics on the Indian Economy*, Table 127 (DGCI&S data) | World Bank WDI `TT.PRI.MRCH.XD.WD` |
 | Monthly export and import unit value indices (2012-13 = 100; new 2022-23 = 100 series) | DGCI&S Foreign Trade Indices | Recompute NTT = UVx / UVm × 100 |
 | Crude oil prices: Brent, Dubai, average (monthly) | World Bank Pink Sheet | FRED (Brent) |
-| Indian crude basket | PPAC (Ministry of Petroleum) / data.gov.in | Published monthly values |
-| Real oil price deflator | World Bank MUV index / US CPI | — |
+| Indian crude basket | PPAC (Ministry of Petroleum) | World Bank Dubai/Brent (basket is a weighted mix) |
+| Crude import volume and value; import dependence | PPAC | RBI Handbook trade tables |
+| Real oil price deflator | World Bank MUV index | US CPI |
 | Real effective exchange rate | RBI 40-currency REER | BIS REER |
 | Non-fuel commodity prices; gold price | World Bank Pink Sheet | — |
-| Oil shares of exports and imports | RBI Handbook / Commerce Ministry TradeStat | — |
+| Oil shares of exports and imports | RBI Handbook / Commerce Ministry TradeStat | DGCI&S |
+| RCA of refined petroleum; HS 27/2709/2710 trade (for GL index and unit values) | UNCTADstat (cited in L08) | UN Comtrade |
+| India's share of world oil consumption | Energy Institute *Statistical Review of World Energy* | US EIA |
+| GDP (for ToT income loss as % of GDP) | MoSPI / RBI Handbook | World Bank WDI |
 | Identified oil shocks (monthly) | Känzig (2021) oil supply news shocks; Baumeister & Hamilton (2019) | — |
 
-**Data-quality rules:**
-- Raw files are never edited by hand. Every transformation is done in code.
-- `data/SOURCES.md` records the URL, table number, download date, units, base year, fiscal vs calendar year, and a checksum for every file.
-- A validation script checks:
-  - recomputed NTT matches the published NTT
-  - sources agree with each other
-  - base-year splices are consistent
-  - known values match
-  - Indian fiscal year (April–March) alignment is correct
-- One teammate hand-checks 10 random values against the source documents (`data/validation_log.md`).
+**Data-quality rules:** see [`../data/SOURCE_POLICY.md`](../data/SOURCE_POLICY.md). The short version:
+- Only official agencies, international organisations, or peer-reviewed replication data. No Kaggle, Statista, news sites or blogs.
+- Raw files are never edited.
+- Every file is logged with its URL, table, date, units, base year and checksum.
+- Every key series is cross-checked against a second source.
+- Fiscal years (April–March) are aligned in code.
+- One teammate hand-checks 10 random values against the original publications.
 
 ## 7. Analysis
 
@@ -121,7 +128,7 @@ Software: Python notebooks committed with outputs, so they display directly on G
 
 | Presenter | Section | Time |
 |---|---|---|
-| P1 | Hook → motivation → course theory and mechanism → hypotheses | ~4 min |
+| P1 | Hook → motivation → theory in action (India vs world offer curves; the ToT benchmark) → hypotheses | ~4 min |
 | P2 | Literature and gap → data and stylized facts | ~3.5 min |
 | P3 | Methodology → long-run and asymmetry results (H1, H2) | ~4 min |
 | P4 | Shock-source results (H3) → robustness → policy → conclusion and limitations | ~3.5 min |
