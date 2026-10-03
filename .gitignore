@@ -1,0 +1,6 @@
+# Large raw archives (re-downloadable; small extracts are committed, see code/extract_large_raw.py)
+data/raw/eia/INTL.zip
+data/raw/unctad/*.7z
+data/raw/unctad/extracted/
+__pycache__/
+.ipynb_checkpoints/
