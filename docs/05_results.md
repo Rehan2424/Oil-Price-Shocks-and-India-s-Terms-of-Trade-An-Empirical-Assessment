@@ -8,7 +8,7 @@ All numbers come from [`../output/tables/`](../output/tables/), produced by the 
 |---|---|---|
 | **H1** | Oil price rises **worsen** India's terms of trade. | Short-run elasticity **−0.24** (goods & services, s.e. 0.04 robust) and **−0.28 to −0.30** (merchandise). Monthly: **−0.39** after 2 months. |
 | **H2** | Rises and falls have **roughly symmetric** effects. **Not supported.** | Short-run symmetry never rejected (p = 0.54–0.91). Long-run asymmetry only when the 1970s are included; disappears for FY1980–2024 (p = 0.28). |
-| **H3** | Supply-driven increases do **not** hurt more than demand-driven ones. **Not supported.** | Annual: supply −0.07 vs demand −0.11 (p equal = 0.71). Monthly 3-month: −0.24 vs −0.37 (p = 0.54). |
+| **H3** | Supply-driven increases do **not** hurt more than demand-driven ones. **Not supported.** | Annual: supply −0.07 vs demand −0.11 (p equal = 0.71). Monthly 3-month: −0.24 vs −0.37 (p = 0.53). |
 | **Exposure** | India's sensitivity has **roughly halved**, in line with its rising refined-product exports. | Rolling elasticity −0.30 (window to FY1989-90) → −0.11 (to FY2024-25). Benchmark s_x − s_m: −0.25 (1999-00) → −0.10 (2025-26). |
 | **Theory test** | The trade-share benchmark explains direction and magnitude. | Coefficient 1.70 (s.e. 0.38); cannot reject = 1 at 5% (p = 0.07). |
 
@@ -25,8 +25,9 @@ ToT changes in oil episodes (fiscal-year averages):
 | 2022 Russia–Ukraine (FY20→22) | +83% | −14.4% | **−23.7%** |
 
 **Monthly episodes:**
-- **2022:** Feb→Jun 2022, merchandise ToT **−16.1%** while Brent rose 25%.
-- **2026 Hormuz crisis:** Feb→Jun 2026, ToT **−13.1%**. In Feb→Apr 2026, export unit values rose **+18.1%** against **+15.7%** for imports, so the fall came with a lag. The refining hedge delayed it.
+- **2022:** the merchandise ToT reached its lowest point in our monthly data in June 2022 (89.4), while Brent rose 25% from February to June. In fiscal-year averages it fell 23.7% from FY2020-21 to FY2022-23.
+- **2026 Hormuz crisis (data to June):** no clear fall yet. From February to April 2026 export unit values rose **+18.1%**, as fast as import unit values (**+15.7%**). In three-month averages, April–June is above November–January on both DGCI&S bases (+5.5% and +3.4%). The refining hedge is at work.
+- **Single months are unreliable:** DGCI&S's 2012-13 and 2022-23 bases barely agree month to month (correlation of monthly changes about zero over 2023–26; Feb→Jun 2026 is −13% on one and +8% on the other). We never judge an episode on one month.
 
 ## 2. H1: ARDL (notebook 03, FY1970-71 to FY2024-25, N = 54)
 
@@ -38,10 +39,10 @@ ToT changes in oil episodes (fiscal-year averages):
 | Bounds F | 4.74 | p vs I(0) = 0.025, vs I(1) = **0.070** | |
 
 - **Diagnostics:**
-  - No serial correlation (BG p = 0.90), normal errors (JB p = 0.26), correct functional form (RESET p = 0.84).
+  - No serial correlation (BG p = 0.90), normal errors (JB p = 0.25), correct functional form (RESET p = 0.84).
   - Heteroskedasticity detected (BP p = 0.02), so HC1 robust s.e. are reported; the conclusions are unchanged.
   - CUSUM and CUSUMSQ stay inside the 5% bands.
-- **Robustness:** short-run elasticity of −0.20 to −0.28, significant in all six specifications.
+- **Robustness:** short-run elasticity of −0.19 to −0.28, significant in all six specifications.
 - **Interpretation:** oil shocks hit India's ToT **hard and fast but temporarily**. About 31% of the deviation closes each year, and the long-run effect is small. This matches the L13 time-horizon logic: short-run fixity, long-run adjustment.
 
 ## 3. H2: NARDL (notebook 04)
@@ -73,7 +74,7 @@ ToT changes in oil episodes (fiscal-year averages):
 |---|---|---|---|
 | Annual G&S ToT, FY1975–2025 | −0.07 (0.07) | **−0.11 (0.05)** | 0.71 |
 | Annual merchandise, FY1995–2024 | −0.03 (0.10) | −0.13 (0.09) | 0.55 |
-| Monthly, 3-month cumulative | −0.24 (0.17) | **−0.37 (0.09)** | 0.54 |
+| Monthly, 3-month cumulative | −0.24 (0.17) | **−0.37 (0.09)** | 0.53 |
 
 - **Känzig OPEC supply-news shocks:**
   - Annual: −0.95% per shock (≈ −0.1 elasticity; s.e. 0.49).
@@ -88,7 +89,7 @@ ToT changes in oil episodes (fiscal-year averages):
   - 0.10 when they are measured separately.
 
   The aggregation effect warned about in L17.
-- **Refined-export unit value ÷ crude-import unit value:** 1.23–1.41, i.e. vertical, value-adding trade (L20).
+- **Refined-export unit value ÷ crude-import unit value:** 1.13–1.41 over 2000–2025, outside the ±15% band in every year except 2011–12, i.e. vertical, value-adding trade (L20).
 - **India's oil demand:** 5.4% of world consumption, 3rd largest (EIA 2024). India is not a pure price-taker, which is why we use exogenous shocks.
 - **Import bill vs volume:** the bill moves with the oil price (correlation of annual changes 0.96); volume does not fall when prices rise. Partial-equilibrium inelastic demand.
 
@@ -99,7 +100,8 @@ ToT changes in oil episodes (fiscal-year averages):
 3. The goods-and-services ToT includes services (software), which dilutes the oil effect. The merchandise series is shorter.
 4. Imports are valued CIF and exports FOB, so freight and insurance spikes also move measured ToT (L14).
 5. The 2026 Hormuz shock is still unfolding: data run to June 2026 (ToT) and March 2026 (BH shocks).
-6. Official series contained errors that we corrected (see `docs/03_data.md`). Results could change if RBI revises them.
+6. DGCI&S's two monthly bases disagree month to month, so monthly results are noisier than the annual ones.
+7. Official series contained errors that we corrected (see `docs/03_data.md`). Results could change if RBI revises them.
 
 ## 8. Policy implications
 

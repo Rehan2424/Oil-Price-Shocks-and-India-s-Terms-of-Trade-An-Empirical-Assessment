@@ -97,8 +97,9 @@ for ax, (title, before, after, who) in zip(axes, cases):
     ax.set_title(title, fontsize=8)
     ax.set_xlabel("India's exports X", fontsize=7.5)
 axes[0].set_ylabel("Oil Y (India's import)", fontsize=7.5)
-axes[0].text(1.25, 0.25, "ToT 1.00 → 0.86", fontsize=7, color=INK)
-axes[1].text(1.25, 0.25, "ToT 1.00 → 0.86", fontsize=7, color=INK)
+# the label is computed from the equilibrium, so it always matches the curves drawn
+for ax, (title, before, after, who) in zip(axes, cases):
+    ax.text(1.25, 0.25, f"ToT {eq(*before)[0]:.2f} → {eq(*after)[0]:.2f}", fontsize=7, color=INK)
 fig.tight_layout(w_pad=0.6)
 out(fig, "offer_curves")
 
@@ -127,7 +128,7 @@ ax.set_title("Oil elasticity of India's ToT")
 ax.set_xlabel("last fiscal year of the window")
 ax.legend(loc="lower right")
 for y in (1989, 2024):
-    ax.annotate(f"{roll.loc[y, 'elasticity']:.2f}", (y, roll.loc[y, "elasticity"]), xytext=(0, 6), textcoords="offset points",
+    ax.annotate(f"{roll.loc[y, 'elasticity']:.2f}".replace("-", "−"), (y, roll.loc[y, "elasticity"]), xytext=(0, 6), textcoords="offset points",
                 ha="center", fontsize=7, color=INK2)
 fig.tight_layout()
 out(fig, "rolling_elasticity")

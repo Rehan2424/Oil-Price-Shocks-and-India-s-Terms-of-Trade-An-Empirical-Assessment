@@ -24,12 +24,10 @@ Everyone reads `viva-notes/00_one_page_summary.md` and `viva-notes/04_results.md
 
 ## Before the presentation
 
-- [ ] Add our four names to the title slide: the `TODO` near the top of `presentation/slides.tex`. Recompile
-      (or do it on Overleaf, see `presentation/README.md`).
 - [ ] Hand-check the eleven values in `data/validation_log.md` against the original publications and sign them off.
       It takes about 30 minutes and is the best answer to "how do you know your data are right?".
 - [ ] Read through the deck once with `presentation/slides_with_notes.pdf`, each presenter saying their part aloud.
-- [ ] Two timed rehearsals. The scripts add up to about 13 minutes; aim to finish by 14 minutes.
+- [ ] Two timed rehearsals. The scripts add up to 13–14 minutes; aim to finish by 14.
 - [ ] One mock viva with questions drawn at random from `viva-notes/05_QA_bank.md`.
 - [ ] Know where the backup slides are (after the thank-you slide): episodes, unit roots, ARDL tables, NARDL,
       supply vs demand, the refining hedge, monthly data, limitations.

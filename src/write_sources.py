@@ -55,12 +55,19 @@ def sha(p):
     return h.hexdigest()
 
 
+# Direct links to the RBI Handbook pages we use (checked against the live site on 4 October 2026).
+RBI_PAGES = {"T32_": 23857, "T111_": 23936, "T113_": 23938, "T115_": 23940, "T121_": 23946, "T122_": 23947,
+             "T123_": 23948, "T133_": 23958, "T135_": 23960}
+
 rows = []
 for p in sorted(RAW.rglob("*")):
     if p.is_dir() or "extracted" in p.parts:
         continue
     rel = p.relative_to(RAW).as_posix()
     meta = next((m for m in META if rel.startswith(m[0])), ("(see folder)", "", ""))
+    page = next((v for k, v in RBI_PAGES.items() if rel.startswith("rbi/HBS2026_" + k)), None)
+    if page:
+        meta = (meta[0], meta[1], f"https://www.rbi.org.in/Scripts/PublicationsView.aspx?id={page}", "Table number in file name")
     rows.append(f"| `{rel}` | {meta[1]} | {meta[2]} | {meta[3]} | `{sha(p)[:16]}…` |")
 
 text = f"""# Data Sources

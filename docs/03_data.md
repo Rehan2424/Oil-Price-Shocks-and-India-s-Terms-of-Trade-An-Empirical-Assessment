@@ -56,6 +56,13 @@ These are worth knowing for the viva: they show the data were checked, not just 
 7. **Monthly DGCI&S data before April 2019 are not published online.**
    - The 1999-2000-base monthly page says "No Data Found"; the 2012-13 archive starts in FY2019-20.
    - The monthly sample is therefore 87 months. The long annual series carry the history.
+8. **DGCI&S's two current monthly series disagree month to month.**
+   - DGCI&S now publishes a 2022-23 base next to the 2012-13 base. Over April 2023 to June 2026, the correlation of
+     their monthly changes is about zero; from February to June 2026, one shows the terms of trade 13% lower and the
+     other 8% higher.
+   - Single months are dominated by changes in the mix of goods, so we never judge an episode on one month. We use
+     fiscal-year averages and regressions over many months, and the 2012-13 base for the monthly models because the
+     new base only starts in April 2023.
 
 ## 4. Cross-checks passed (see validation report)
 

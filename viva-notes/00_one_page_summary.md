@@ -30,7 +30,7 @@ and monthly data from April 2019 to June 2026.
 | Speed of adjustment α | **−0.31** (31% of the gap closes each year) | `t03` |
 | Long-run elasticity | −0.09, not significant (p = 0.12) | `t03` |
 | Bounds test | F = 4.74; p = 0.025 vs the I(0) bound, 0.070 vs the I(1) bound | notebook 03 |
-| Short-run effect across six specifications | −0.20 to −0.28, all significant | `t04` |
+| Short-run effect across six specifications | −0.19 to −0.28, all significant | `t04` |
 | Monthly elasticity two months after a rise | **−0.39** (almost zero in month 0) | `t08` |
 | Benchmark test coefficient (theory says 1) | **1.70**, cannot reject 1 at 5% (p = 0.07) | `t07` |
 | Rolling elasticity, window ending FY1989 → FY2024 | **−0.30 → −0.11** | `t08b` |
@@ -40,7 +40,8 @@ and monthly data from April 2019 to June 2026.
 | RCA of refined petroleum, 1999 → 2025 | **0.06 → 4.37** | UNCTADstat |
 | Grubel–Lloyd for oil, one industry vs crude and products separately | **0.55 vs 0.10** | UN Comtrade |
 | India's share of world oil demand (2024) | 5.4%, third after the US and China | EIA |
-| Merchandise ToT, Feb → Jun 2022 and Feb → Jun 2026 | −16.1% and −13.1% | DGCI&S monthly |
+| Merchandise ToT after the 2022 shock, FY2020-21 → FY2022-23 | −23.7% | RBI Table 121 |
+| 2026 so far (data to June) | No clear fall yet: export prices rose as fast as import prices | DGCI&S monthly |
 
 Fiscal years are labelled by the year they start: "FY2024" means 2024-25.
 

@@ -6,7 +6,7 @@ What each lecture covers, and what we take from it for the oil and terms-of-trad
 
 ### L05: Introduction to Trade Theories (Low)
 - Covers trade patterns over time, trade fallacies (the "zero-sum" view), Smith, Ricardo, Melitz, evidence on openness and growth (Sachs–Warner; Frankel–Romer), and protectionism history.
-- Cites the *Financial Express* finding that India has comparative advantage vs China in "food, agricultural raw materials, **fuels**, ores, metals".
+- In a slide on India and China (citing the *Financial Express*), notes that "India has comparative advantage in the world market in many other commodities such as food items, agricultural raw materials, **fuels** and ores, metals and precious stone".
 - **For us:** that fuels point supports our RCA calculation for refined petroleum (L08).
 
 ### L06: Mercantilism (Low)

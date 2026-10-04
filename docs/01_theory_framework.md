@@ -103,13 +103,13 @@ There are no standalone theory slides. Each concept turns up where it does some 
 | Slide | Concept | What the audience sees |
 |---|---|---|
 | 2 Question and hypotheses | Net barter ToT (L21); monopoly power (L16); offer curves (L22) | The definition we measure; where each hypothesis comes from |
-| 3 Offer curves for India | Offer curves, tariff case, large country (L22, L11) | Cases A and C drawn for India; ToT ray 1.00 → 0.86; −16% (2022) and −13% (2026) |
+| 3 Offer curves for India | Offer curves, tariff case, large country (L22, L11) | Cases A and C drawn for India; ToT ray 1.00 → 0.86; −24% after the 2022 shock |
 | 4 How big should the hit be? | ToT definition (L21); RCA (L08); Grubel–Lloyd (L17, L19) | Benchmark −0.25 → −0.10; RCA 0.06 → 4.37; GL 0.55 vs 0.10 |
 | 7 Method | Time horizons (L13) | Short run vs long run, the reason for the error-correction model |
 | 10 Symmetric, and half as large | RCA as a hedge (L08, L16) | Rolling elasticity tracking the benchmark |
 | 11 H3 | Offer curves, case B (L22) | Why the world-boom softening does not show up for India |
 | 12 What it means for India | Pro-competitive effect (L16); refining scale (L08, L16) | Policy: diversify suppliers, grow the refining hedge |
-| Backup: refining hedge | Vertical IIT and the unit-value rule (L20) | Refined exports worth 1.2–1.4 times crude imports per tonne |
+| Backup: refining hedge | Vertical IIT and the unit-value rule (L20) | Refined exports worth 1.13–1.41 times crude imports per tonne |
 
 The rest (partial equilibrium, Ricardo–Viner, H-O, CIF/FOB, mercantilism, immiserizing growth) is in the viva notes,
 `viva-notes/01_theory.md`, in definition-plus-application form.

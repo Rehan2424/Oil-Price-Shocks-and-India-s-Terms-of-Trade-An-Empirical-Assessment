@@ -94,7 +94,7 @@ Schneider 2020), because 54 observations is small and the asymptotic tables are 
 |---|---|---|
 | Breusch–Godfrey (2 lags) | 0.90 | No serial correlation |
 | Breusch–Pagan | 0.019 | **Heteroskedasticity**, so we also report HC1 robust s.e. |
-| Jarque–Bera | 0.26 | Residuals are normal |
+| Jarque–Bera | 0.25 | Residuals are normal |
 | Ramsey RESET | 0.84 | Functional form is fine |
 | CUSUM and CUSUMSQ | inside 5% bands | Coefficients are stable over time |
 
@@ -102,7 +102,7 @@ Schneider 2020), because 54 observations is small and the asymptotic tables are 
 - HC1 is White's robust covariance with a small-sample correction, n/(n − k).
 
 **Robustness (six specifications).** The baseline, oil only, adding gold, Brent instead of the average crude,
-post-1980 only, and merchandise ToT. The short-run elasticity stays between −0.20 and −0.28 and is
+post-1980 only, and merchandise ToT. The short-run elasticity stays between −0.19 and −0.28 and is
 significant in every one.
 
 **Why ARDL and not Johansen or Engle–Granger?**
@@ -223,13 +223,13 @@ done in three samples:
 - annual merchandise ToT;
 - monthly merchandise ToT, as three-month cumulative effects.
 
-**Result.** Demand-driven rises hurt at least as much in all three. Equality is never rejected (p = 0.54 to 0.71).
+**Result.** Demand-driven rises hurt at least as much in all three. Equality is never rejected (p = 0.53 to 0.71).
 
 | Sample | Supply-driven | Demand-driven | p (equal) |
 |---|---|---|---|
 | Annual G&S, FY1975–2025 | −0.07 (0.07) | −0.11 (0.05) | 0.71 |
 | Annual merchandise, FY1995–2024 | −0.03 (0.10) | −0.13 (0.09) | 0.55 |
-| Monthly, 3-month cumulative, 2019–26 | −0.24 (0.17) | −0.37 (0.09) | 0.54 |
+| Monthly, 3-month cumulative, 2019–26 | −0.24 (0.17) | −0.37 (0.09) | 0.53 |
 
 **Cross-check with Känzig (2021).** These are oil supply *news* shocks, measured from oil futures prices in a
 narrow window around OPEC announcements. India cannot cause them, so they settle the endogeneity worry. One

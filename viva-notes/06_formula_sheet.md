@@ -72,12 +72,12 @@ Step 2: ΔToT_t = a + b_S · supply part_t + b_D · demand part_t + e_t,  H₀: 
 
 | Test | Null | Our p |
 |---|---|---|
-| ADF, Phillips–Perron | Unit root | levels ≈ 0.05, differences 0.000 |
+| ADF, Phillips–Perron | Unit root | levels 0.05–0.95 (ToT and oil ≈ 0.05), differences ≤ 0.001 |
 | KPSS | Stationary | levels 0.01–0.10 |
 | Zivot–Andrews | Unit root with one break | 0.39 (ToT), 0.53 (oil) |
 | Breusch–Godfrey | No serial correlation | 0.90 |
 | Breusch–Pagan | Homoskedastic errors | 0.019 |
-| Jarque–Bera | Normal errors | 0.26 |
+| Jarque–Bera | Normal errors | 0.25 |
 | Ramsey RESET | Correct functional form | 0.84 |
 | CUSUM / CUSUMSQ | Stable coefficients | inside 5% bands |
 

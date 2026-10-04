@@ -4,7 +4,7 @@ Course: NPTEL, *International Trade*, Dr. Pratap C. Mohanty, IIT Roorkee. Main t
 
 | No. | File | Topic | Used in our project? |
 |---|---|---|---|
-| 5 | [L05_Intro_Trade_Theories.pdf](L05_Intro_Trade_Theories.pdf) | Introduction to trade theories | Low: context (India's comparative advantage in fuels vs China) |
+| 5 | [L05_Intro_Trade_Theories.pdf](L05_Intro_Trade_Theories.pdf) | Introduction to trade theories | Low: context (lists fuels among India's comparative-advantage goods) |
 | 6 | [L06_Mercantilism.pdf](L06_Mercantilism.pdf) | Mercantilism, bullionism | Low: viva point (trade deficit vs ToT; gold imports) |
 | 7 | [L07_Absolute_Advantage.pdf](L07_Absolute_Advantage.pdf) | Absolute advantage (Smith) | Low |
 | 8 | [L08_Comparative_Advantage_RCA.pdf](L08_Comparative_Advantage_RCA.pdf) | Comparative advantage, **Balassa RCA index** | **High**: RCA of India's refined petroleum exports |

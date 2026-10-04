@@ -60,7 +60,7 @@ values from 54 to 2001), so we use price indices only.
 
 **Numbers.**
 - In our stylised diagram (slide 3), India's terms of trade fall from 1.00 to 0.86 in case A.
-- The data: merchandise ToT fell 16.1% from February to June 2022 and 13.1% from February to June 2026.
+- The data: after the 2022 shock, India's merchandise ToT fell 23.7% (FY2020-21 to FY2022-23).
 - In 2014–16 (case D), the merchandise ToT rose 19.4%.
 
 **The elasticity point.** India's short-run oil demand is very inelastic. When the rest of the world's curve
@@ -81,7 +81,7 @@ exports) and s_m (oil in imports). Take logs and differentiate, holding non-oil 
   so the effect is negative. That is H1.
 - **The size:** the benchmark gives the elasticity before any regression. It was −0.25 in FY1999 and is
   about −0.10 in FY2025.
-- **Why it shrank:** s_x rose from about 3% in FY1990 to 12–22% since FY2008. The big private refineries at
+- **Why it shrank:** s_x rose from about 3% in FY1990 to between 9% and 22% since FY2008 (22% in FY2022). The big private refineries at
   Jamnagar (1999, expanded in 2008) turned India into a large exporter of refined fuels.
 
 **What the regression adds.** We test whether the actual effect matches the benchmark (coefficient 1.70; we
@@ -119,8 +119,8 @@ means India exports relatively more of j than the world does.
 - **Refined petroleum (SITC 334):** 0.06 in 1999, 1.26 in 2000, **4.37** in 2025.
 - **Crude (SITC 333):** about 0.
 
-India has almost no oil but a strong *acquired* comparative advantage in refining it. L05 even quotes India's
-advantage over China in "fuels". This is the main reason India's exposure to oil prices has fallen.
+India has almost no oil but a strong *acquired* comparative advantage in refining it. L05 even lists "fuels" among the
+goods in which India has a comparative advantage in the world market. This is the main reason India's exposure to oil prices has fallen.
 
 ---
 
@@ -156,8 +156,8 @@ intra-industry". India both imports and exports "mineral fuels" (HS chapter 27).
 
 **Horizontal vs vertical (L20).** Unit values separate the two. If export and import unit values are within
 ±15% of each other, the goods are horizontally differentiated (similar quality). Otherwise the trade is vertical.
-- India's refined-export unit value is **1.23 to 1.41 times** its crude-import unit value per tonne
-  (2005–2025), well outside ±15%.
+- India's refined-export unit value is **1.13 to 1.41 times** its crude-import unit value per tonne
+  (2000–2025), outside ±15% in every year except 2011 and 2012.
 - So this is vertical, value-adding trade: India imports a raw input and exports a processed product. The
   refining margin is the hedge.
 

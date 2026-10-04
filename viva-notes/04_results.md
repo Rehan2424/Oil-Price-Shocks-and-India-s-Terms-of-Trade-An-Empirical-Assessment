@@ -18,7 +18,7 @@ year. The effect is fast but temporary: about a third of it unwinds every year."
 | Error-correction α | −0.308 | 0.086 | 0.001 |
 
 - **Statistical significance:** the short-run effect is significant at well below 1%, with or without robust
-  standard errors, and in all six specifications (−0.20 to −0.28).
+  standard errors, and in all six specifications (−0.19 to −0.28).
 - **Economic significance:**
   - The 2022 oil rise (+83% in the fiscal-year average from FY2020 to FY2022) maps into roughly 0.24 × 83 ≈ 20%
     by the elasticity alone. The actual fall was 14% (goods and services) and 24% (merchandise).
@@ -34,10 +34,11 @@ about 0.4% lower for every 1% rise in Brent, and they stay there."
 
 **The 2026 episode.**
 - From February to April 2026, export unit values rose 18.1% and import unit values 15.7%. Refined-fuel export
-  prices rose with crude, so the ToT barely moved at first.
-- By June the ToT was 13.1% below February, as import prices kept rising (+20% Feb–Jun) while export prices fell
-  back.
-- This is the refining hedge working, but only for a while.
+  prices rose with crude.
+- Up to June 2026 there is no clear fall in the terms of trade: April–June is not below November–January on
+  either DGCI&S base (+5.5% on the 2012-13 base, +3.4% on the 2022-23 base, in three-month averages).
+- So far, 2026 is the refining hedge at work. It is also a reminder not to read single months: from February to
+  June, one DGCI&S base shows −13% and the other +8%.
 
 ---
 
@@ -52,12 +53,12 @@ about 0.4% lower for every 1% rise in Brent, and they stay there."
 **Rolling elasticity (t08b).**
 - "India's exposure has roughly halved. A 10% oil rise used to cost about 3% of the terms of trade, and now it
   costs about 1.1%."
-- **Why:** India's oil share of exports rose from about 3% (FY1990) to 12–22% (since FY2008). The benchmark fell
+- **Why:** India's oil share of exports rose from about 3% (FY1990) to 9–22% (since FY2008). The benchmark fell
   from −0.25 to −0.10 over FY1999–2025, and the estimated elasticity followed it.
 - **Supporting theory numbers:**
   - RCA in refined petroleum: 0.06 → 4.37.
   - Grubel–Lloyd for oil: 0.55 aggregated vs 0.10 separated.
-  - Export/import unit value ratio: 1.23 to 1.41.
+  - Export/import unit value ratio: 1.13 to 1.41 (2000–2025).
 
 ---
 
@@ -91,7 +92,7 @@ because a world boom raises the price of everything India imports, not just oil.
 |---|---|---|---|
 | Annual G&S, FY1975–2025 | −0.07 | −0.11 | 0.71 |
 | Annual merchandise, FY1995–2024 | −0.03 | −0.13 | 0.55 |
-| Monthly, 3-month cumulative | −0.24 | −0.37 | 0.54 |
+| Monthly, 3-month cumulative | −0.24 | −0.37 | 0.53 |
 
 - **Why the offer-curve intuition (case B) fails for India:** in a boom, India's other imports also get dearer
   (gold, coal, fertiliser, edible oils, metals). India's exports are mostly manufactures and services, whose
@@ -125,13 +126,13 @@ online. This is one reason we also use monthly data where we can.
 
 | Slide | Number | Source |
 |---|---|---|
-| 1 Hook | Brent +46% ($71.1 → $103.7), basket $69 → $113, Rs 94.65, ToT −13.1% | Pink Sheet; PPAC; RBI Table 133; DGCI&S (notebook 01) |
+| 1 Hook | Brent +46% ($71.1 → $103.7), basket $69 → $113, Rs 94.65, ToT −24% after 2022 | Pink Sheet; PPAC; RBI Tables 121, 133 |
 | 2 Hypotheses | 90% of crude imported; 5.4% of world demand | RBI Table 32; EIA (notebook 02) |
-| 3 Offer curves | 1.00 → 0.86 (illustrative); −16% (2022), −13% (2026) | Diagram code; DGCI&S monthly |
+| 3 Offer curves | 1.00 → 0.86 (illustrative); −24% (FY2020-21 to FY2022-23) | Diagram code; RBI Table 121 |
 | 4 Benchmark | −0.25 → −0.10; RCA 0.06 → 4.37; GL 0.55 vs 0.10 | RBI Table 111; UNCTADstat; UN Comtrade (notebook 02) |
 | 6 Data | +21.7% vs −21.0%; Table 32 duplicate; QI 54 to 2001 | Validation report |
-| 8 H1 | −0.24, α −0.31, LR −0.09, F 4.74 (p 0.07), range −0.20 to −0.28 | t03, t04 |
+| 8 H1 | −0.24, α −0.31, LR −0.09, F 4.74 (p 0.07), range −0.19 to −0.28 | t03, t04 |
 | 9 Timing | −0.39 at 2 months; benchmark 1.70 (p 0.07); +18% vs +16% | t08, t07, notebook 01 |
 | 10 H2 | −0.27 vs −0.22; p 0.54–0.91; p 0.28 from 1980; −0.30 → −0.11 | t06, t08b |
-| 11 H3 | p 0.54–0.71; Känzig 4–5% | t09, notebook 06 |
+| 11 H3 | p 0.53–0.71; Känzig 4–5% | t09, notebook 06 |
 | 12 Conclusion | 2.4%, halved | t03, t08b |

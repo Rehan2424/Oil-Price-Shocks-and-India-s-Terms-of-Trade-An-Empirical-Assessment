@@ -1,6 +1,6 @@
 # 05 · Question bank with model answers
 
-140 questions we could be asked, with answers of a length you can actually say out loud. The tag after each
+141 questions we could be asked, with answers of a length you can actually say out loud. The tag after each
 question is who answers first (P1 to P4; "Any" means whoever is closest).
 
 Don't memorise the wording. Learn the point and the number, then say it your own way. Examiners can tell when an
@@ -145,7 +145,8 @@ inter-industry: crude in, fuels out.
 
 **B13. Is India's oil trade horizontal or vertical?** *(P2)*\
 Vertical. Lecture 20's rule says trade is horizontal if export and import unit values are within ±15% of each
-other. India's refined exports are worth 1.23 to 1.41 times its crude imports per tonne, well outside that band.
+other. India's refined exports are worth 1.13 to 1.41 times its crude imports per tonne (2000–2025), outside that
+band in every year except 2011 and 2012.
 India imports a raw input and sells a processed, higher-value product.
 
 **B14. What does the partial equilibrium model say about the oil import bill?** *(P2)*\
@@ -288,7 +289,8 @@ statistical source.
 
 **D4. Why do the two measures sometimes disagree, as in 2014–16?** *(P2)*\
 The merchandise measure is goods only, where oil is about a quarter of imports. The goods-and-services measure
-adds services, about a third of India's exports, whose prices do not move with oil, so the oil effect is diluted.
+adds services, which have grown from a fifth of India's exports in 1990 to almost half today (WDI). Their prices
+do not move with oil, so the oil effect is diluted.
 The two are also built differently: unit values versus national-accounts deflators.
 
 **D5. How did you handle the change in base years?** *(P2)*\
@@ -343,9 +345,11 @@ finite-sample critical values. The short-run result is significant at well below
 sample size is not what drives it.
 
 **D15. Did anyone check the data by hand?** *(P2)*\
-`data/validation_log.md` lists eleven values, at least one from every source and from old and recent years, with
-exactly where to find each in the original publication. One of us opens each source and ticks it off. The
-automatic checks pass with zero failures.
+Three layers. The validation script cross-checks the sources against each other, with zero failures. A separate
+script re-reads every raw file with its own code, re-estimates every model and compares each number we quote: all
+of them match (`docs/number_check.md`). And we downloaded the main sources again from the RBI, World Bank, FRED and
+Känzig's site and compared them with our copies: identical, every number. `data/validation_log.md` also lists
+eleven values to tick off by hand against the original publications.
 
 **D16. How do you know World Bank and FRED oil prices are the same?** *(P2)*\
 We compared them: correlation 0.9998 and a mean difference of 33 cents a barrel over 441 months. The PPAC basket
@@ -358,6 +362,13 @@ unfolding.
 
 **D18. What does a value like "FY2024" mean in your tables?** *(Any)*\
 The fiscal year that starts in April 2024, so 2024-25. All our annual Indian data use that labelling.
+
+**D19. DGCI&S now publishes a 2022-23 base. Why do your monthly models use the 2012-13 base?** *(P2)*\
+Because the new base only starts in April 2023, which is 39 months, too short for our monthly models. We did compare
+the two: month to month they hardly agree (the correlation of their monthly changes is about zero), and from
+February to June 2026 one shows −13% and the other +8%. That told us single months are mostly noise from the mix of
+goods, so we never judge an episode on one month. Our main results rest on annual data and on regressions over many
+months.
 
 ---
 
@@ -543,13 +554,14 @@ reverse. That is lecture 13's time-horizon logic.
 Crude cargoes are priced on the previous month's benchmark and recorded at customs when they arrive, often weeks
 after loading. So a price rise in March shows up in India's import unit values in April and May.
 
-**F4. Why did India's terms of trade not fall immediately in March 2026?** *(P4)*\
-Because India's refined-fuel exports rose in price too. From February to April 2026, export unit values rose 18.1%
-and import unit values 15.7%. By June, import prices had kept rising and export prices had fallen back, so the terms
-of trade was 13.1% lower. The refining hedge delayed the hit but did not stop it.
+**F4. Your model says oil hurts within two to three months. Why haven't India's terms of trade clearly fallen in 2026?** *(P4)*\
+Because India's refined-fuel exports rose in price too. From February to April 2026, export unit values rose 18.1%,
+as fast as import unit values (15.7%). In three-month averages, April–June is not below November–January on either
+DGCI&S base. That is the refining hedge, and it is why exposure has halved. The data stop in June and single months
+are noisy, so it is too early to call the full effect.
 
 **F5. What did 2022 look like?** *(P4)*\
-From February to June 2022, Brent rose 25% and the merchandise terms of trade fell 16.1%, to its lowest point in our
+From February to June 2022, Brent rose 25% and the merchandise terms of trade fell to its lowest point in our
 monthly data (89.4 in June 2022). In fiscal-year averages, FY2022 was 14.4% below FY2020 for goods and services and
 23.7% below for merchandise.
 
@@ -597,9 +609,9 @@ Since effects are symmetric, roughly 0.24 × 30 ≈ 7% better in the goods-and-s
 in the merchandise measure, mostly within two to three months. Then part of it would fade as the economy adjusts.
 
 **F15. What would your model say about FY2026?** *(P4)*\
-It depends on how long prices stay high. The monthly data already show the merchandise terms of trade 13% lower in
-June than in February. If the fiscal-year average oil price ends well above FY2025's, the annual model points to a
-fall of roughly a quarter of that percentage rise, with recovery in the following years as prices normalise.
+It depends on how long prices stay high and whether refined-fuel export prices keep pace. So far (to June) they
+have, and the monthly data show no clear fall. If the fiscal-year average oil price ends well above FY2025's, the
+annual model points to a fall of roughly a quarter of that percentage rise, with recovery as prices normalise.
 
 ---
 
@@ -650,7 +662,7 @@ freight (CIF) and exports without it (FOB), that raises measured import prices a
 trade, even without an oil price change. That is lecture 14's transport-cost wedge.
 
 **G10. What does your work say about the rupee in 2026?** *(P4)*\
-We do not model the exchange rate directly. The record low of 94.65 per dollar at end-March 2026 is consistent with
+We do not model the exchange rate directly. The rupee's weakest year-end rate on record, 94.65 per dollar at end-March 2026, is consistent with
 the literature (Ghosh 2011): oil shocks raise India's import bill, which weakens the rupee. A weaker rupee does not
 change the terms of trade much, because both export and import prices are mostly set in dollars.
 
@@ -659,7 +671,7 @@ Expect most of the terms-of-trade hit within two to three months of an oil spike
 short run, and expect the same size of gain when oil falls. Use the gains in good times to build reserves.
 
 **G12. Does the energy transition make this question irrelevant?** *(P4)*\
-Not soon. Oil is still about a quarter of India's imports, and India's oil demand is growing. Over decades, lower oil
+Not soon. Oil is still more than a fifth of India's imports (22% in FY2025-26), and India's oil demand is growing. Over decades, lower oil
 use would shrink s_m and the exposure, which is the same direction refining has already moved it.
 
 ---

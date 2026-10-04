@@ -12,15 +12,15 @@
 
 | Speaker | Slides | Script | Time at a calm pace |
 |---|---|---|---|
-| P1 | Title, March 2026 hook, question and hypotheses, offer curves for India | 446 words | ~3.5 min |
-| P2 | How big should the hit be, literature and gap, data | 383 words | ~3 min |
-| P3 | Method, H1 (ARDL), monthly timing | 430 words | ~3.5 min |
+| P1 | Title, March 2026 hook, question and hypotheses, offer curves for India | 462 words | ~3.5 min |
+| P2 | How big should the hit be, literature and gap, data | 384 words | ~3 min |
+| P3 | Method, H1 (ARDL), monthly timing | 448 words | ~3.5 min |
 | P4 | H2 and exposure, H3, what it means for India | 373 words | ~3 min |
 
-That is about 13 minutes at 120 words a minute, which leaves room for pointing at charts and handing over.
+That is 1,667 words: about 13 minutes at a normal speaking pace (130 words a minute), 14 at a slow one. Keep an eye
+on the clock in rehearsal and trim your own script if you run over.
 
-The speaker tag (P1 to P4) is in the top right corner of every slide. Fill in the names on the title slide before
-presenting (look for `TODO` near the top of `slides.tex`).
+The slides themselves carry no speaker labels. In `slides_with_notes.pdf`, each script starts with P1 to P4.
 
 ## Editing on Overleaf
 

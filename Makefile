@@ -8,9 +8,9 @@ PY      := python3
 NB      := notebooks
 DECK    := presentation
 
-.PHONY: all data validate notebooks slides viva overleaf clean
+.PHONY: all data validate notebooks check slides viva overleaf clean
 
-all: data validate notebooks slides viva overleaf
+all: data validate notebooks check slides viva overleaf
 
 data:
 	$(PY) src/build_dataset.py
@@ -24,6 +24,10 @@ notebooks:
 	cd $(NB) && for f in 0*.ipynb; do \
 		jupyter nbconvert --to notebook --execute --inplace "$$f" || exit 1; \
 	done
+
+# recompute every number quoted in the slides and notes from the raw files (docs/number_check.md)
+check:
+	$(PY) src/check_numbers.py
 
 slides:
 	$(PY) src/slide_figures.py

@@ -45,8 +45,9 @@ Monthly world prices are averaged over April to March in our code, never mixed w
 | Fuel trade by HS code | Values and tonnes, HS 2709 (crude) and 2710 (products) | UN Comtrade public API |
 | Oil consumption by country | Thousand barrels a day | US EIA International Energy Data |
 
-**About unit value indices.** DGCI&S indices are Laspeyres indices with a fixed base (2012-13 = 100): the
-unit value (value / quantity) of each commodity, weighted by base-year trade shares. They are not pure prices,
+**About unit value indices.** The current DGCI&S indices (bases 2012-13 and 2022-23) are fixed-base Laspeyres
+indices: the unit value (value / quantity) of each commodity, weighted by base-year trade shares. The older
+1999-2000 series was a Fisher index (RBI Table 121, notes). They are not pure prices,
 because a change in the quality or mix within a commodity code also changes the unit value. That is a known
 limitation, and it applies to every study of India's terms of trade: the official long-run series published by
 DGCI&S and the RBI are built from unit values.
@@ -98,6 +99,12 @@ This is a strong viva point: the data were checked, not just downloaded.
    to FY2007-08 in all four columns. We set those eight years to missing. Our validation script now looks for
    any repeated block of four or more rows in every table.
 7. **No monthly DGCI&S data before April 2019** are online. That limits the monthly sample to 87 months.
+8. **DGCI&S's two current monthly series disagree month to month.** DGCI&S now publishes a 2022-23 base alongside
+   the 2012-13 base. Over April 2023 to June 2026 the correlation of their monthly changes is about zero, and for
+   February to June 2026 one shows the terms of trade 13% lower while the other shows it 8% higher. Single months
+   are dominated by changes in the mix of goods, so we never judge an episode on one month: we use fiscal-year
+   averages and regressions over many months. We use the 2012-13 base for the monthly models because the new base
+   only starts in April 2023.
 
 ## Checks that pass
 

@@ -23,7 +23,7 @@ BIS) and the published shock series of Baumeister and Hamilton (2019) and Känzi
 |---|---|---|
 | **H1** | Supported. Oil price rises worsen India's terms of trade, quickly but temporarily. | Short-run elasticity −0.24 (a 10% oil rise costs 2.4%); 31% of the gap closes each year; monthly peak effect −0.39 after two months |
 | **H2** | Not supported. Rises and falls have about the same effect. | Short run −0.27 vs −0.22, symmetry never rejected (p = 0.54–0.91) |
-| **H3** | Not supported. Demand-driven rises hurt at least as much as supply-driven ones. | Equality never rejected (p = 0.54–0.71); OPEC news shocks cut the terms of trade 4–5% |
+| **H3** | Not supported. Demand-driven rises hurt at least as much as supply-driven ones. | Equality never rejected (p = 0.53–0.71); OPEC news shocks cut the terms of trade 4–5% |
 | **Exposure** | India is about half as exposed as in the 1990s, because it became a large refined-fuel exporter. | Rolling elasticity −0.30 → −0.11; theory benchmark (s_x − s_m) −0.25 → −0.10; RCA in refined petroleum 0.06 → 4.37 |
 
 The full write-up of each result is in [`docs/05_results.md`](docs/05_results.md).
@@ -33,11 +33,12 @@ The full write-up of each result is in [`docs/05_results.md`](docs/05_results.md
 | If you want to… | Go to |
 |---|---|
 | See the slides | [`presentation/slides.pdf`](presentation/slides.pdf), or [`slides_with_notes.pdf`](presentation/slides_with_notes.pdf) with the speaker script |
-| Prepare for the viva | [`viva-notes/`](viva-notes/): one-page summary, theory, data, methods, results, 140 questions with answers, formula sheet ([PDF](viva-notes/Viva_Notes.pdf)) |
+| Prepare for the viva | [`viva-notes/`](viva-notes/): one-page summary, theory, data, methods, results, 141 questions with answers, formula sheet ([PDF](viva-notes/Viva_Notes.pdf)) |
 | Know what to do before the presentation | [`docs/team_plan.md`](docs/team_plan.md) |
 | See how the theory is applied | [`docs/01_theory_framework.md`](docs/01_theory_framework.md) and [`docs/lecture_notes.md`](docs/lecture_notes.md) |
 | Read the literature review | [`docs/02_literature_review.md`](docs/02_literature_review.md) and [`docs/references.md`](docs/references.md) |
 | Check a data source | [`data/SOURCES.md`](data/SOURCES.md) (every file, URL and checksum) and [`docs/03_data.md`](docs/03_data.md) |
+| Check any number we quote | [`docs/number_check.md`](docs/number_check.md): every number in the slides and notes, recomputed from the raw files |
 | See every estimate with its output | [`notebooks/`](notebooks/), saved with outputs, so they display on GitHub |
 | Open the data in Excel | [`data/processed/final_dataset.xlsx`](data/processed/final_dataset.xlsx) |
 
