@@ -36,7 +36,7 @@ The full write-up of each result is in [`docs/05_results.md`](docs/05_results.md
 | Prepare for the viva | [`viva-notes/`](viva-notes/): one-page summary, theory, data, methods, results, 141 questions with answers, formula sheet ([PDF](viva-notes/Viva_Notes.pdf)) |
 | Know what to do before the presentation | [`docs/team_plan.md`](docs/team_plan.md) |
 | See how the theory is applied | [`docs/01_theory_framework.md`](docs/01_theory_framework.md) and [`docs/lecture_notes.md`](docs/lecture_notes.md) |
-| Read the literature review | [`docs/02_literature_review.md`](docs/02_literature_review.md) and [`docs/references.md`](docs/references.md) |
+| Read the literature | [`literature/`](literature/): one page per paper (link, summary, what we use from it); the narrative review is [`docs/02_literature_review.md`](docs/02_literature_review.md) |
 | Check a data source | [`data/SOURCES.md`](data/SOURCES.md) (every file, URL and checksum) and [`docs/03_data.md`](docs/03_data.md) |
 | Check any number we quote | [`docs/number_check.md`](docs/number_check.md): every number in the slides and notes, recomputed from the raw files |
 | See every estimate with its output | [`notebooks/`](notebooks/), saved with outputs, so they display on GitHub |
@@ -51,6 +51,7 @@ data/
   validation_report.md      automatic checks (0 failures)
   validation_log.md         values to check by hand against the original publications
 docs/                       theory framework, literature review, data, methods, results, team plan
+literature/                 one-page summary of each paper we cite, grouped by strand
 notebooks/                  01 data and stylised facts ... 06 supply vs demand shocks
 src/                        dataset build, validation, econometrics helpers, slide figures
 output/figures, tables/     every chart and table the notebooks produce

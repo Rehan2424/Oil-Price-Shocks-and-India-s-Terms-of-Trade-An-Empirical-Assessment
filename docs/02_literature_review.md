@@ -1,6 +1,6 @@
 # Literature Review
 
-Kept deliberately short (16 core references in four strands) so it fits the 15-minute presentation and can be defended in the viva. Every reference was checked against Crossref (DOI), RePEc or the publisher; the full list with DOIs is in [`references.md`](references.md).
+Kept deliberately short (16 core references in four strands) so it fits the 15-minute presentation and can be defended in the viva. Every reference was checked against Crossref (DOI), RePEc or the publisher; the full list with DOIs is in [`references.md`](references.md), and a one-page summary of each paper is in [`../literature/`](../literature/).
 
 ## Strand 1: Why terms of trade matter
 
