@@ -16,7 +16,7 @@ because it became a refined-fuel exporter.
 | | Presents | Owns in the viva | Files to know best |
 |---|---|---|---|
 | **P1** | Hook, question and hypotheses, offer curves (slides 1–3, ~3.5 min) | Theory: terms of trade, offer curves, small vs large country, welfare | `docs/01_theory_framework.md`, `viva-notes/01_theory.md` |
-| **P2** | Benchmark, literature, data (slides 4–6, ~3 min) | Benchmark, RCA and Grubel–Lloyd, literature, data sources and the data problems we fixed | `docs/02_literature_review.md`, `docs/03_data.md`, `viva-notes/02_data.md` |
+| **P2** | Benchmark, literature, data (slides 4–6, ~3 min) | Benchmark, RCA and Grubel–Lloyd, literature, data sources and the data problems we fixed | `docs/02_literature_review.md`, `literature/`, `docs/03_data.md`, `viva-notes/02_data.md` |
 | **P3** | Method, H1, monthly timing (slides 7–9, ~3.5 min) | Unit roots, ARDL and the bounds test, diagnostics, local projections, benchmark test | `docs/04_methodology.md`, `viva-notes/03_methods.md`, notebooks 03 and 05 |
 | **P4** | H2 and exposure, H3, policy (slides 10–12, ~3 min) | NARDL, supply vs demand shocks, rolling elasticity, policy, limitations | `docs/05_results.md`, `viva-notes/04_results.md`, notebooks 04 and 06 |
 
