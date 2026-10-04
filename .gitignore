@@ -1,0 +1,23 @@
+# Large raw archives (re-downloadable; small extracts are committed, see src/extract_large_raw.py)
+data/raw/eia/INTL.zip
+data/raw/unctad/*.7z
+data/raw/unctad/extracted/
+__pycache__/
+.ipynb_checkpoints/
+
+# LaTeX build files: the two PDFs are committed, everything else latexmk recreates
+presentation/*.aux
+presentation/*.fdb_latexmk
+presentation/*.fls
+presentation/*.log
+presentation/*.nav
+presentation/*.out
+presentation/*.snm
+presentation/*.toc
+presentation/*.synctex.gz
+viva-notes/*.aux
+viva-notes/*.fdb_latexmk
+viva-notes/*.fls
+viva-notes/*.log
+viva-notes/*.out
+viva-notes/*.toc

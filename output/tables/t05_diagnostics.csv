@@ -1,0 +1,5 @@
+,p-value,Null hypothesis
+Breusch-Godfrey LM (serial corr.) p,0.9013508435568436,no serial correlation (2 lags)
+Breusch-Pagan (heterosked.) p,0.018782737370932105,homoskedastic errors
+Jarque-Bera (normality) p,0.254656836442825,normal errors
+Ramsey RESET p,0.8434204318286332,correct functional form

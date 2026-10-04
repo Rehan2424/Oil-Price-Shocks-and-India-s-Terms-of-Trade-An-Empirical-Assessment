@@ -1,0 +1,46 @@
+variable,table,description,unit,source
+date,monthly,First day of the month,date,-
+fy,all fiscal,"Indian fiscal year (April-March), labelled by starting year: 2024 = 2024-25",year,-
+brent,monthly/annual,"Crude oil, UK Brent spot price (FY/CY averages of monthly data in annual tables)",US$/bbl,World Bank Pink Sheet (monthly)
+dubai,monthly/annual,"Crude oil, Dubai Fateh spot price",US$/bbl,World Bank Pink Sheet (monthly)
+oil_avg,monthly/annual,"Crude oil, average of Brent, Dubai, WTI (equally weighted)",US$/bbl,World Bank Pink Sheet (monthly)
+wti,monthly,"Crude oil, WTI spot price",US$/bbl,World Bank Pink Sheet (monthly)
+gold,monthly/annual,Gold price,US$/troy oz,World Bank Pink Sheet (monthly)
+wb_energy_idx,monthly,World Bank energy price index,2010=100,World Bank Pink Sheet (monthly indices)
+wb_nonenergy_idx,monthly/annual,World Bank non-energy commodity price index,2010=100,World Bank Pink Sheet (monthly indices)
+icb_ppac,monthly/annual,Indian crude basket FOB price (FY2020-21 onward; FY2022-23 not available on PPAC website),US$/bbl,PPAC (Ministry of Petroleum & Natural Gas)
+uvi_x_b12 / uvi_m_b12,monthly,DGCI&S unit value index of exports / imports (Laspeyres; base 2012-13=100; Apr 2019 onward),index,DGCI&S Foreign Trade Indices
+ntt_b12,monthly,Net barter terms of trade = 100*uvi_x_b12/uvi_m_b12 (recomputed),index,DGCI&S (computed)
+ntt_pub_b12,monthly,Net terms of trade as published by DGCI&S (used only to validate ntt_b12),index,DGCI&S
+qi_x_b12 / qi_m_b12,monthly,DGCI&S quantum indices (NOT used: export QI is erratic; see validation log),index,DGCI&S
+uvi_x_b22 / uvi_m_b22 / ntt_b22,monthly,Same as above on the new base 2022-23=100 (Apr 2023 onward),index,DGCI&S
+reer_bis,monthly/annual,"Real effective exchange rate, broad (64 economies), CPI-based; higher = rupee appreciation",2020=100,BIS
+kanzig_news_shock,monthly,"Oil supply news shock (OPEC announcements), Kanzig (2021, AER); vintage 2025M12",std. shock,Kanzig official data (github.com/dkaenzig/oilsupplynews)
+kanzig_surprise,monthly,Oil supply surprise series (futures price change around OPEC announcements),percent,Kanzig official data
+bh_supply,monthly,"Structural oil supply shock, Baumeister & Hamilton (2019, AER), posterior median",shock,Baumeister official data
+bh_activity / bh_consumption_demand / bh_inventory_demand,monthly,"Structural economic activity, oil consumption demand, oil inventory demand shocks (BH 2019)",shock,Baumeister official data
+world_ip,monthly,OECD+6 major non-member economies industrial production index (BH 2019),index,Baumeister official data
+gecon,monthly,"Global Economic Conditions indicator (Baumeister, Korobilis & Lee 2022, REStat)",index,Baumeister official data
+tot_gs_na,annual_fy,Terms of trade for goods & services from national accounts = export deflator / import deflator (FY2015-16=100),index,World Bank WDI (NE.EXP/IMP.GNFS.CN and .KN)
+px_gs_defl / pm_gs_defl,annual_fy,Implicit deflators of exports / imports of goods & services,FY2015-16=100,World Bank WDI
+ntt_rbi_1978 / ntt_rbi_1999 / ntt_rbi_2012,annual_fy,"Merchandise net terms of trade, DGCI&S, as published by RBI for each base year",index,RBI Handbook 2025-26 Table 121
+ntt_rbi_chained,annual_fy,"Chain-linked merchandise NTT: 1999-2000 base for 1999-2012, linked back to 1978-79 base at 1999-00 and forward to 2012-13 base at 2012-13",index (1999-00=100),Computed from RBI Table 121
+x_oil_usdm ... tb_total_usdm,annual_fy,"Exports, imports and trade balance: oil, non-oil, total",US$ million,RBI Handbook 2025-26 Table 111
+s_x_oil / s_m_oil,annual_fy,Oil share of total exports / imports,share,Computed from RBI Table 111
+benchmark_elasticity,annual_fy,Theory-predicted elasticity of NTT to the oil price = s_x_oil - s_m_oil,elasticity,Computed
+net_oil_imports_pct_gdp,annual_fy,(Oil imports - oil exports) as % of GDP,% of GDP,RBI Table 111 + WDI GDP (US$)
+crude_imp_mmt / pol_imp_mmt / crude_prod_mmt,annual_fy,Crude and petroleum product imports and production,million tonnes,RBI Handbook 2025-26 Table 32
+inr_usd_avg / inr_usd_end,annual_fy,Rupee per US dollar (FY average / end-March),Rs per US$,RBI Handbook 2025-26 Table 133
+reer40_rbi_fy,annual_fy,"RBI 40-currency trade-weighted REER (base 2015-16=100), FY2009-10 onward",index,RBI Handbook 2025-26 Table 135
+gdp_usd / india_gdp_growth,annual_fy,"GDP, current US$ / real growth (WDI India national accounts are FY-based)",US$ / %,World Bank WDI
+muv_fy,annual_fy,"Manufactures Unit Value index converted to FY (0.75*CY t + 0.25*CY t+1)",2010=100,World Bank Pink Sheet (annual)
+real_brent / real_oil_avg / real_nonenergy / real_gold,annual_fy,"Price deflated by MUV: relative price of the commodity in terms of manufactures",2010 US$,Computed
+*_fysum,annual_fy,Sum over the fiscal year of monthly shock series,shock units,Computed
+ntt_wdi,annual_cy,"Net barter terms of trade index (CY, 2005-2024 only)",2015=100,World Bank WDI TT.PRI.MRCH.XD.WD
+uvi_x_unctad / uvi_m_unctad / ntt_unctad,annual_cy,"UNCTAD export/import unit value and terms-of-trade indices (CY, 2005-)",2015=100,UNCTADstat US.TermsOfTrade
+rca_crude_333 / rca_refined_334 / rca_residual_335,annual_cy,Balassa revealed comparative advantage (SITC 333 crude; 334 refined petroleum; 335 residual products),index,UNCTADstat US.RCA
+oilcons_*_kbd / india_share_world_oil_cons,annual_cy,Petroleum and other liquids consumption; India's share of world,thousand bbl/day; share,US EIA International Energy Data
+x_27_usd / m_2709_usd / ... ,annual_cy,"India's exports (x) and imports (m) by HS code, world partner (TOTAL, 27, 2709 crude, 2710 refined); *_kg = net weight",US$ / kg,UN Comtrade (public API)
+gl_27 / gl_2709 / gl_2710 / gl_oil_hs2_like / gl_oil_hs4_weighted,annual_cy,"Grubel-Lloyd index GL = 1 - |X-M|/(X+M) at different aggregation levels (L19)",0-1,Computed from UN Comtrade
+uv_imp_crude_usd_t / uv_exp_refined_usd_t / uv_ratio_refined_x_over_crude_m,annual_cy,Unit values of crude imports and refined exports and their ratio (L20 vertical IIT),US$ per tonne; ratio,Computed from UN Comtrade
+world_gdp_growth,annual_cy,World real GDP growth,%,World Bank WDI
